@@ -371,4 +371,25 @@ def greet():
   global x 
 
 
+-- Object Oriented Programming in Python
+- Following is the syntax to create class:
+
+  class MyClassName:
+    def __init__(self, att):
+      self.att = att
+    
+    def some_method(self):
+      self.att = True
+
+- Class name should be Pascal case.
+- __int__ is called constructor.
+- self is similar to this.
+- For each method we need to pass reference of this
+- Class Object Attribute - This are attribute that are share common value for every object created.
+- They are defined above __init__method.
+- They are reference using self.varName or ClassName.varName
+- We can also pass default parameter for any method we define as well as for init().
+
+-- Inheritance and Polymorphism
+
 
