@@ -391,5 +391,63 @@ def greet():
 - We can also pass default parameter for any method we define as well as for init().
 
 -- Inheritance and Polymorphism
+- To inherit a base class use follow syntax:
+  class DerivedClass(BaseClass):
+      def __init__(self):
+        #Derived class constructor
+        BaseClass.__init__(self) #Base class constructor
 
+      #Derived class method
+- We can call/override base class method using derived class instance
 
+-- Special Magic/Dunder Methods
+- len(), print(), str(), del keyword are generic methods.
+- We can use this method with list, set, tuples etc.
+- But when we use them with object the give out error.
+- Hence in order to use these method with our object we can use special method called as magic or dunder method.
+- This method start and end with __(double underscore).
+- __str__ - method is used to print out string representation of our object.
+- __len__ function can be used to print out any numerical value representing that object.
+- __del__ function is used to perform some extra operation needs to be perform while deleting the object.
+
+-- Modules and Packages in Python
+-PyPI is a repository for open-source third-party Pyhton Packages.
+- It is similar to npm for nodejs.
+- Modules is just a .py script that you call in another .py script.
+- Packages are collection of modules.-
+- To create a package add __init__.py.
+- This is an empty file.
+- To import this package use follow syntax:
+  from FolderName import FileName
+
+  FileName.functionName()
+
+  -- __name__ and __main__
+  - When ever we run our file "__main__" string is assigned to "__name__" variable.
+  - It is a built-in varible of Python,
+  - Using this variable we can check whether a module is run or is imported from another package.
+
+  -- Error and Exception handling
+  - Eror handling is similar to that of in another programming languages used.
+  - We have try-except-else-finally block.
+  - try block is a block where we test our code for error.
+  - except block is triggered when we get an error in try block.
+  - else block is followed after except block, this block is executed when we get no error in try block.
+  - And finally block is executed after the execution of except or else block.
+
+-- PyLint Overview
+- For testing we use following tools:
+- Pylint: This is a library that looks at your code and report back possible issues. Issues basically related to indentation, styling and variable assignment.
+- unittest - This built-in library  will allow you to test your own programs and check are you getting desired outputs.
+- Python has a set of style convention rules known as 'PEP8'.
+- To run a pylint use below command:
+  pylint program-name.py
+- To improve our rating of pylint use below tips:
+ - Add DOCSTRING at the begin of any module.
+ - Add DOCSTRING for every user-defined function.
+ - Add new line at eof
+- unittesting demo is given in unitTesting.py file.
+
+-- Decorators in Python
+- Decorator allows you to decorate your function.
+ 

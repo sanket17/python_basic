@@ -24,7 +24,7 @@ def check_pig_latin(word):
         pig_latin_word = word + 'ay'
     else:
         pig_latin_word = word[1:] + word[0] + 'ay'
-    print(f"PIG LATIN WORD - {pig_latin_word}")
+    print('PIG LATIN WORD - {}'.format(pig_latin_word))
 
 check_pig_latin('word')
 check_pig_latin('apple')
