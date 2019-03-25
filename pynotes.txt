@@ -450,5 +450,454 @@ def greet():
 
 -- Decorators in Python
 - Decorator allows you to decorate your function.
+- Suppose we have a function say hello(), we need to add some functionality to it.
+- One way is that we write a new function, another way is that we can manually add/remove extra functionality code.
+- So Decorator allow us to add this functionality in the form of on/off button.
+- In python, we can define a function inside a function.
+- We can also return a function from another function.
+- Functions are object in pyhton.
+- Consider the following example:
+  def hello():
+    print('Hello World')
+
+  hello()
+  print(hello) //<function hello at 0x7f358895e668>
+
+  greet = hello
+
+  del hello
+  greet() // Heelo World
+  hello() // error
+
+- Hence from above example it is clear that functions are object in Python.
+- As we know that we can pass/return any function from any another function.
+def original_func():
+    print('This is original function')
+
+def decorator_func(some_func):
+    def wrapper_func():
+        print('This is starting of wrapper function')
+        some_func()
+        print('This is end of wrapper function')
+
+    return wrapper_func
+
+new_decorated_func = decorator_func(original_func)
+new_decorated_func()
+
+# The above function can also be decorated as:
+print('After adding @ operator')
+@decorator_func
+def original_func():
+    print('This is original function')
+
+original_func()
+
+print('After removing @ operator')
+# @decorator_func
+def original_func():
+    print('This is original function')
+
+original_func()
+
+- @ operator as used above helps original func to add/remove extra functionality that we want to implement.
+
+--Generators with Python
+- Generator function allows us to write a function that can send back a value and then latter resume to pick up where it left off.
+- Generator function generates value of a specific range.
+- They have some iterating protocal on them.
+- When we want to generate a series of values we can manually used function.
+- In this function we generate list of value. This list is stored in memory.
+- When we generate a value from generator it is not stored in memory.
+- We can use yeild keyword to generate the individual element in series.
+- generator.py file contains the example we convert a manual function into generator.
+- next() function is used to fetch next element of generator.
+- iter() function is used to convert string into generator so that they can access next() function.
+
+-- Advanced Pyhton Modules
+- Counter module
+- It resides in collection package.
+- Counter() gives count of each element in dictionary format:
+>>> from collections import Counter
+>>> l = [1,2,2,2,6,54654,643,6]
+
+>>> Counter(l)
+Counter({2: 3, 6: 2, 1: 1, 643: 1, 54654: 1})
+>>> str_var = 'Hello'
+>>> Counter(str_var)
+Counter({'l': 2, 'H': 1, 'e': 1, 'o': 1})
+
+>>> Counter(str_var).most_common()
+[('l', 2), ('H', 1), ('e', 1), ('o', 1)]
+>>> 
+
+- defaultdict:
+- Suppose we created a dictionaries and we try to access a value whose key is not present in dict.
+- Then it will give us key error.
+- When we use defaultdict, if we access un-avaialble key, it will not through key-error.
+
+-OrderedDict
+- When we create a dict and print it, it gets printed in unordered format.
+- Consider the following example:
+# ordered dict
+
+mydict = {}
+mydict['a'] = 1
+mydict['b'] = 2
+mydict['c'] = 3
+
+for k,v in mydict.items():
+    print(k, v)
+
+from collections import OrderedDict
+
+mydict = OrderedDict()
+mydict['a'] = 1
+mydict['b'] = 2
+mydict['c'] = 3
+
+print('After using ordered dict:\n')
+
+for k,v in mydict.items():
+    print(k, v)
+
+-namedtuples
+- When we create a tuple, each element in tuple is access using indexes.
+- When we have larger number of element in tuples, it becomes hard to remember indexes of each element.
+- So namedtuple is collection using which we can access element using names as well as indexes.
+- When we create a namedtuple, we bascially create a class as follow:
+
+var = namedtuple(classname, 'atrr1 attr2 attr3')
+
+-- DateTime
+- datetime is the module used for manipulating date and time in pyhton.
+- datetime.datetime.now() method is used to print current date and time.
+- datetime.time(h, m, sec, microsec, tzinfo) is used to create an instance of user specified time.
+- datetime.date(year, month, day) is used to created an instance of user defined date.
+- We can use, .hour, .minute ,.microsecond ,.year ,.month ,.day methods to get desired values from date time instance.
+- datetime.replace(value=) method is used to replace/change the desired instance.
+- We can aslo perform arithmatic operation on two different date instances.
+>>> import datetime
+>>> datetime.datetime.now()
+datetime.datetime(2019, 3, 25, 10, 5, 21, 453006)
+>>> d1 = datetime.datetime.now()
+>>> d1.hour
+10
+>>> d1.minute
+7
+>>> d1.second
+34
+>>> d1.microsecond
+215486
+>>> d1.year
+2019
+>>> d1.month
+3
+>>> d1.day
+25
+>>> d1.replace(day=17)
+datetime.datetime(2019, 3, 17, 10, 7, 34, 215486)
+>>> d1.replace(hour=1)
+datetime.datetime(2019, 3, 25, 1, 7, 34, 215486)
+>>> d2 = datetime.datetime.now()
+>>> d2 - d1
+datetime.timedelta(0, 560, 135671)
+
+- datetime.today() is used to get current date.
+- min, max, resolution is used to get minValue, Max value range and resolution(min difference) of datetime.
+
+-- Python Debugger
+- pdb is the python Debugger
+- To use this debugger import pdb module.
+- Use pdb.pdb.set_trace() method to set the debugger in the code.
+- When we reach at debugger we can cross check the desired value.
+- To quit from debugger when can press q.
+- To continue execution to next line after debugger press c.
+b: set a breakpoint
+c: continue debugging until you hit a breakpoint
+s: step through the code
+n: to go to next line of code
+l: list source code for the current file (default: 11 lines including the line being executed)
+u: navigate up a stack frame
+d: navigate down a stack frame
+p: to print the value of an expression in the current context
+
+-- Timing your code - timeit module
+- Suppose we want to test the execution time of our code we can use timeit.timeit() method.
+- We can use this in two ways 1st is using magic string and another is timeit.timit() method.
+- timeit.timeit() method takes two arguments, 1st is expression in string that we want to test for timeit, and another is number= (no. of times we want to execute the statement)
+
+-- Regular Expression - re
+- RE is text matching expression.
+- To use it we need to import re module
+- To match a specific pattern in string we can use re.match(pattern, string).
+- This method returns object of match result if found or send object of type None if nothing is matched.
+- On the match object we can call start(), end() method get that starting and ending index of our matching pattern.
+- The above methods returns start and end index of the 1st occurance of the match pattern.
+- To split a string into list we can either use str.split() or re.split(pattern, phrase)
+- This method returns list object of the slpitted list.
+
+>>> import re
+>>> result3 = re.match('Hello', 'Hello Hello')
+
+>>> result3
+<_sre.SRE_Match object; span=(0, 5), match='Hello'>
+>>> result3.start()
+0
+>>> result3.end()
+5
+>>> result4 = re.findall('Hello', 'Hello Sam, Hello Tam, hello Jam')
+>>> result4
+['Hello', 'Hello']
+>>> len(result4)
+2
+
+- re.findall() method is used to return all the instance of the matched pattern into list.
+- Using len() on the above returned reult we can get the number of occurance of a particular pattern in the string.
+- Regular Expression Repetition Syntax:
+
+sd* - s followed by zero or more d's
+sd+ - s followed by one or more d's
+sd? - s followed by zero or one d
+sd{3} - s followed by three d's
+sd{2, 3} - s followed by two to three d's
+
+- Regular Expression character sets:
+- They are used when we wish to match any group of characters.
+- This grouping is done using [] Operators
+[sd] - either s or d
+- We can also apply repetition syntax to character sets.
+
+- Regular Expression Exclusion:
+- To avoid matching of some characters from the string we can using exclusion operator.
+- ^ is the operator used for exclusion.
+s[^d]+ - exclude any positive match of character d
+
+- Regular Expression Character Ranges:
+- Sometimes specificing range of characters in character sets becomes tedious.
+- Hence to avoid it we can use Character range expression.
+- It is denoted using - character
+[a-z]+ - sequence of lower case letters
+[A-Z]+ - sequence of upper case letters
+[a-zA-Z]+ - sequence of lower or upper case letters
+[a-z][A-Z]+ - sequence of lower case followed by upper case letters
+
+- Regular Expression escape code:
+- Using escape codes we can find specific patterns in our data,digits, non-digits, whitespaces etc.
+\d - digit
+\D - non-digit
+\s - whitespaces(tab, space, newline, etc..)
+\S - non-whitespaces
+\w - aplha-numeric
+\W - non-alpha-numeric
+
+-- String IO 
+- String IO module implements an in-memory file like object. This object can be used as input or output to most functions that would expect a standard file object.
+- We need to import StringIO module to use it.
+- StringIO.StringIO(STR) is the method used to convert a normal string into in-memory file object.
+- All file related operation can be applied over this object.
+
+-- Advanced Python Object and data structure
+
+- Advanced Numbers
+>>> hex(32)
+'0x20'
+>>> bin(32)
+'0b100000'
+>>> 3**3
+27
+>>> pow(3,3)
+27
+>>> pow(3,3,1)
+0
+>>> abs(-1)
+1
+>>> round(3.141532, 3)
+3.142
+>>> 
+
+- hex(decimal) - returns hexadecimal representation of that number.
+- bin(decimal) - returns binary format represenation of that number.
+- pow(x, y, z) - returns (x**y) % z
+- abs() - returns absolute values.
+- round(x, y) - returns round of value of x, y represent number of decimal digit to be displayed.
+
+-Advanced String
+>>> str1 = 'hello World'
+>>> str1.capitalize()
+'Hello world'
+>>> str1.upper()
+'HELLO WORLD'
+>>> str1.lower()>>> str1.capitalize()
+'Hello world'
+>>> str1.upper()
+'HELLO WORLD'
+>>> str1.lower()
+'hello world'
+>>> str1.islower()
+False
+
+'hello world'
+>>> str1.islower()
+False
+
+>>> str1.isalnum()
+False
+>>> str1.isalpha()
+False
+>>> str1
+'hello World'
+>>> str1.isalpha()
+False
+>>> str1.isspace()
+False
+>>> str1.istitle()
+False
+>>> str1.endswith('d')
+True
+>>> str2 = 'hihihpihihi'
+>>> str2.split('i')
+['h', 'h', 'hp', 'h', 'h', '']
+>>> str2.partition('i')
+('h', 'i', 'hihpihihi')
+>>> str2.count('i')
+5
+>>> str2.find('p')
+5
+
+
+- capitalize() capitalizes first letter of the string.
+- istitle() checks if the string is of type heading title
+- partition() splits the string from the first occurance of the match.
+- count() returns the number of occurance of given character in string.
+- find() returns index of first occurance of given character.
+
+-- Advanced Sets
+
+>>> s = {1,2,3}
+>>> sc = s.copy()
+>>> sc
+{1, 2, 3}
+>>> s.add(4)
+>>> s
+{1, 2, 3, 4}
+>>> s1 = {1,2,3,4}
+>>> s2 = {1,4,5}
+>>> s1.difference(s2)
+{2, 3}
+>>> s2.difference(s1)
+{5}
+>>> s2.difference(s2)
+set()
+>>> sc.clear()
+>>> sc
+set()
+>>> sc = s.copy()
+>>> sc
+{1, 2, 3, 4}
+>>> s1.difference_update(s2)
+>>> s1
+{2, 3}
+>>> s1.add(1)
+>>> s1.add(4)
+>>> s1
+{1, 2, 3, 4}
+>>> s1.intersection(s2)
+{1, 4}
+>>> s1.intersection_update(s2)
+>>> s1
+{1, 4}
+>>> s1
+{1, 4}
+>>> s1
+{1, 4}
+>>> s2
+{1, 4, 5}
+>>> s1.isdisjoint(s2)
+False
+>>> s3 = {7}
+>>> s1.isdisjoint(s3)
+True
+>>> s1.issubset(s2)
+True
+>>> s1.issubset(s1)
+True
+>>> s1.issuperset(s1)
+True
+>>> s2.issuperset(s1)
+True
+>>> s1.union(s2)
+{1, 4, 5}
+>>> s1
+{1, 4}
+>>> s1.symmetric_difference(s2)
+{5}
+>>> s2.symmetric_difference(s1)
+{5}
+>>> s2.update(s1)
+>>> s2
+{1, 4, 5}
+>>> s1.update(s2)
+>>> s1
+{1, 4, 5}
+>>> 
+
+-- Advanced Dictionaries
+- dict.viewvalues() is used to display values in dictionaries.
+- dict.viewitems() is used to display items other than iter methods.
+- iter methods like items(), itervalues(), iterkeys() are used to display items in dictionaries.
+
+-- Advanced list
+>>> l1 = [1,2,3]
+>>> l1.append(4)
+>>> l1
+[1, 2, 3, 4]
+>>> l1.append([5,7])
+>>> l1
+[1, 2, 3, 4, [5, 7]]
+>>> l1.pop()
+[5, 7]
+>>> l1
+[1, 2, 3, 4]
+>>> l1.pop(2)
+3
+>>> l1
+[1, 2, 4]
+>>> l1.extend([3,5])
+>>> l1
+[1, 2, 4, 3, 5]
+>>> l1.sort()
+>>> l1
+[1, 2, 3, 4, 5]
+>>> l1.reverse
+<built-in method reverse of list object at 0x7f695c0f51c8>
+>>> l1.reverse()
+>>> l1
+[5, 4, 3, 2, 1]
+>>> l1
+[1, 2, 3, 4, 5]
+>>> l1.count(1)
+1
+>>> l1.insert(1,0)
+>>> l1
+[1, 0, 2, 3, 4, 5]
+>>> l1.append(0)
+>>> l1
+[1, 0, 2, 3, 4, 5, 0]
+>>> l1.remove(0)
+>>> l1
+[1, 2, 3, 4, 5, 0]
+
+
+
+
+
+
+
+
+ 
+
+
+
 
  
