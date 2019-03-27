@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Assessment Html Test
+    </title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+<body>
+    <h1>Course Sign Up Page</h1>
+    <form action="">
+        <p>Please Note: First Name, Last Name, Password and Email are required</p>
+        <div>
+            <label for="first-name">First Name: </label>
+            <input id="first-name" type="text" name="firstname" placeholder="First Name" required>
+            <label for="last-name">Last Name: </label>
+            <input id="last-name" type="text" name="lastname" placeholder="Last Name" required>
+        </div>
+        <div>
+            <label for="user-email">Email: </label>
+            <input id="user-email" type="email" name="useremail" placeholder="name@email.com" required>
+            <label for="user-passowrd">Password: </label>
+            <input id="user-passowrd" type="text" name="userpassword" required>
+        </div>
+        <div>
+            <span>Are you over the age of 18?</span>
+            <label for="user-age-above-18">Yes:</label>
+            <input id="user-age-above-18" type="radio" name="userage" value="Yes">
+            <label for="user-age-below-18">No:</label>
+            <input id="user-age-below-18" type="radio" name="userage" value="No">
+        </div>
+        <div>
+            <span>Do you have Credit Card or PayPal?</span>
+            <select name="userpayment" id="user-pay">
+                <option value="Credit">Credit Card</option>
+                <option value="PayPal">PayPal</option>
+            </select>
+        </div>
+        <input type="submit" name="signin" id="sign-in" value="Sign-in">
+    </form>
+
+</body>
+</html>

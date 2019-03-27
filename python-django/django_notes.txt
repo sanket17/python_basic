@@ -1,0 +1,59 @@
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Django notes
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+HTML Level one - Basics
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+- Introduction
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+- New tag for bold is strong
+- New tag for italics is em
+- table tag has an border attribute in which we specify the number for the thickness of the border as:
+    <table border = "1"></table>
+- input type color gives us ablity to select color from color picker.
+    <input type="color" name="" value="">
+- default color is black
+- For input type as radio button, give same name attribute for all group radio button.
+- Doing this will give one selection behaviour for all those grouped radio button.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+CSS Introduction
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+- em size is in proportion to its parent size.
+- It means that suppose we have not defined any font size for our page, so default font-size is 16px.
+- In the above case, 1em = 16px, 2em = 32px .. so on.
+- https://www.cssfontstack.com/ shows the font availablity on various OS.
+- https://fonts.google.com/ and https://fontlibrary.org/ are the sites which provide free, open-source fonts to download and use.
+- Box model in css looks as below:
+    margin
+    border
+    padding
+    content
+- We can define value for 4 sides in one line as follow's: top, right, bottom, left // clockwise 
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Javascript Introduction
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+- JS uses camel case notation ex> bankAccount.
+- Difference between null and undefined is that, when a variable is set to undefined it means that the variable is declared but not defined/set.
+- When a variable is set to null it means that variable is defined and set to nothing.
+- prompt(message) method is like alert method, it is basically used to get input from user in the form of string.
+- use clear() function to clear console.    
+- == operatores does type cohersion mean that it tries to convert and check both the operands to a limit as they seems to user.
+- It ignores the data types.
+- === operator compares datatypes of the two operands used.
+- null == undefined //true
+- NaN == NaN  // false
+- string are immutable, i.e we can access them using indexes but we cannot change character within them using indexes.
+- for..of loop syntax, it is used with array:
+    for (variableName of arrObject){
+        console.log(variableName);
+    }
+- Suppose we have to call a function viz., someTask() on each element of the array, then we can use forEach loop as:
+    arrObject.forEach(someTask);
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Document Object Model
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------

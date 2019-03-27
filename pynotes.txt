@@ -1,13 +1,17 @@
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 Python Notes:
-
--- Variables Assignment:
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Variables Assignment:
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - Variables names should be in lower case.
 - White spaces are not allowed instead use _
 - Python uses dynamic typing which means that any variable can be reassign to different datatype.
 - to check datatype of variables in python use type() function.
-
---Strings in python:
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Strings in python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - Strings are ordered collection of characters.
 - Indexing [] and slicing can be done.
 - Reverse indexing is also possible, it means last character will be -(strLength-1)
@@ -22,18 +26,22 @@ Python Notes:
     o/p - Hello
         World
 - len() function is used to get length of string.
-
--- Indexing and Slicing with strings:
--Reverse indexing starts with index -1 because in reverse indexing 0 is considered 1st character of the string.
-- step value in [start:end:step] ignores that number of character from starting point and prints the next character
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Indexing and Slicing with strings:
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+- Reverse indexing starts with index -1 because in reverse indexing 0 is considered 1st character of the string.
+-  step value in [start:end:step] ignores that number of character from starting point and prints the next character
     example> mystring = 'abcdefghij'
             mystring[::2]
             o/p: acegj
 - we can print whole string as follows 
     mystring[:] or mystring[::]
 - To reverse string use: mystring[::-1]
-
--- String Properties and Methods
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+String Properties and Methods
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - String are immutables i.e we cannot change character using index assignment.
 - To grab each word of string in a list use slipt() method as:
 >>> mystring = "Hello World"
@@ -41,8 +49,10 @@ Python Notes:
 ['Hello', 'World']
 - slpit() method splits the string using whitespaces if not character is provided.
 - use hashtag # to comment line in code.
-
--- Print formatting with strings:
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Print formatting with strings
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - string.format() method is used to format string
 - syntax is as follows
   'something {} something {}'.format('str1', str2)
@@ -84,9 +94,10 @@ Result is 0.129
 India is my country
 >>> print(f'Result is {result:3.3f}')
 Result is 0.129
-
-
---List in Python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+List in Python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - LIST is ordered sequence that holds variety of object types.
 - Indexing and slicing is possible.
 - Elements are comma seperated.
@@ -120,9 +131,11 @@ IndexError: list assignment index out of range
 - sort() function is used to sort the element in the element in place i.e, sort() doesnot return any new list, it performs action in the same list.
 - sort() is performed if all the elements in the list are of same type.
 - reverse() function is used to reverse list in decending format. It also performs in place reversing.
-
---Dictionaries in Python
--Dictionaries are unordered mappings for storing objets.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Dictionaries in Python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+- Dictionaries are unordered mappings for storing objets.
 - Data is stored in key-value pair, key-value pair advantage is that it grabs data quickly than that of indexes.
 - They are unordered and cannot be sorted.
 - Syntax for dictionaries are:
@@ -148,8 +161,10 @@ dict_values([100, [1, 2, 3], {'in': True, 'out': False}])
 dict_items([('key1', 100), ('key2', [1, 2, 3]), ('key3', {'in': True, 'out': False})])
 >>> my_dict['key3']['out']
 False
-
---Tuples with Pyhton
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Tuples with Pyhton
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - Tuples are very similar to that of list.
 - Main difference is that they are immutable.
 - Once element is inside tuple it cannot be reassigned.
@@ -174,8 +189,10 @@ AttributeError: 'tuple' object has no attribute 'sort'
 (3, 7)
 >>> mytuple[::]
 (3, 5, 7, 1)
-
---Sets in Python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Sets in Python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - Sets are unordered collection of unique elements.
 - There can be only one set of object at a time.
 - Sets are created using set() function.
@@ -194,14 +211,18 @@ AttributeError: 'tuple' object has no attribute 'sort'
 >>> my_set_list = [1,1,1,2,2,2,3,3]
 >>> set(my_set_list)
 {1, 2, 3}
-
---Boolean in Python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Boolean in Python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - Booleans represent truth/false of expression or statements.
 - In python, booleans are represented as True or False.
 - type(True) is bool.
 - In python when we don't want to assign variable any value, we can specify its type as None.
-
---I/O with basic files in Python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+I/O with basic files in Python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - To open a file in python use open() function.
 - To read a file use read().
 - To read lines in list format use readlines() method.
@@ -217,9 +238,10 @@ with open('myfile.txt') as my_new_file:
 - The  above syntax is similar to normal file operation.
 - When the file is opened with the above syntax it is only accessible within its given scope.
 - And after that scope file gets automatically closed.
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 Basic Practice:
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 http://codingbat.com/python
 
 More Mathematical (and Harder) Practice:
@@ -237,18 +259,23 @@ https://www.reddit.com/r/dailyprogrammer
 A very tricky website with very few hints and touch problems (Not for beginners but still interesting)
 
 http://www.pythonchallenge.com/
-
-
---Logical Operators in Python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Logical Operators in Python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - key logical operator keywords are: and or not
-
--- for loop
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+for loop
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - Syntax:
   iterativeObj = something
   for tempvar in iterativeObj:
     print(tempvar)
-
--- while loops in Pyhton
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+while loops in Pyhton
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - Syntax:
   while some_cond:
     #do something
@@ -269,8 +296,10 @@ for items in iterativeItem:
 for items in iterativeItem:
   # comment
   pass
-
--- Useful operator in python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Useful operator in python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - range(start, stop,[step]): Its is a generator operator.
 - generators are special operator/function which generate data
 - If we want to print element using indexes we can use enumrate operator
@@ -314,12 +343,16 @@ True
 - random(start_limit, end_limit): is used to return a random number with specified range.
 - input() function is used to get input from user in string format.
 - int(), float(), str() are use for type conversion.
-
--- List comprehensions in python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+List comprehensions in python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - List comprehensions are unique way of quickly creating a list with python.
 - Its implementation is given in LoopStatement.py file.
-
---Function in python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Function in python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - Syntax:
     def function_name(arg):
         #function code
@@ -333,20 +366,24 @@ True
   INPUT: name of input args
   OUTPUT: expected output 
   '''
-
-  -- *args and **kwargs in python
-  - args - arguments
-  - kwargs - keyword arguments
-
-  -- Lambda Expression, Map and Filter Functions:
-  - Lambda expression are basically used to create an anonymous function quickly which can be used only one time.
-  - map(func, *iterableObj) - when we need to apply a function to every element in iterable object we just use map() function.
-  - map() returns a new object whose every element has been applied with the function passed to map.
-  - filter(func, *iterableObj) - when we need to extract a particular set of element from iterableObject which satisfies given function condn then we can use filter().
-  - The func that we pass to filter() must return a boolean value.
-  
-
---Nested statement and scope
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+*args and **kwargs in python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+- args - arguments
+- kwargs - keyword arguments
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Lambda Expression, Map and Filter Functions:
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+- Lambda expression are basically used to create an anonymous function quickly which can be used only one time.
+- map(func, *iterableObj) - when we need to apply a function to every element in iterable object we just use map() function.
+- map() returns a new object whose every element has been applied with the function passed to map.
+- filter(func, *iterableObj) - when we need to extract a particular set of element from iterableObject which satisfies given function condn then we can use filter().
+- The func that we pass to filter() must return a boolean value.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+Nested statement and scope
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - Python uses following rule for assign accessing variable:
 LEBG Rule:
 L: Local: variables assigned in function
@@ -369,9 +406,10 @@ def greet():
     print(x)
 - To access global variable in greet() use 
   global x 
-
-
--- Object Oriented Programming in Python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Object Oriented Programming in Python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - Following is the syntax to create class:
 
   class MyClassName:
@@ -389,8 +427,10 @@ def greet():
 - They are defined above __init__method.
 - They are reference using self.varName or ClassName.varName
 - We can also pass default parameter for any method we define as well as for init().
-
--- Inheritance and Polymorphism
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Inheritance and Polymorphism
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - To inherit a base class use follow syntax:
   class DerivedClass(BaseClass):
       def __init__(self):
@@ -399,8 +439,10 @@ def greet():
 
       #Derived class method
 - We can call/override base class method using derived class instance
-
--- Special Magic/Dunder Methods
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Special Magic/Dunder Methods
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - len(), print(), str(), del keyword are generic methods.
 - We can use this method with list, set, tuples etc.
 - But when we use them with object the give out error.
@@ -409,8 +451,10 @@ def greet():
 - __str__ - method is used to print out string representation of our object.
 - __len__ function can be used to print out any numerical value representing that object.
 - __del__ function is used to perform some extra operation needs to be perform while deleting the object.
-
--- Modules and Packages in Python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Modules and Packages in Python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 -PyPI is a repository for open-source third-party Pyhton Packages.
 - It is similar to npm for nodejs.
 - Modules is just a .py script that you call in another .py script.
@@ -421,21 +465,26 @@ def greet():
   from FolderName import FileName
 
   FileName.functionName()
-
-  -- __name__ and __main__
-  - When ever we run our file "__main__" string is assigned to "__name__" variable.
-  - It is a built-in varible of Python,
-  - Using this variable we can check whether a module is run or is imported from another package.
-
-  -- Error and Exception handling
-  - Eror handling is similar to that of in another programming languages used.
-  - We have try-except-else-finally block.
-  - try block is a block where we test our code for error.
-  - except block is triggered when we get an error in try block.
-  - else block is followed after except block, this block is executed when we get no error in try block.
-  - And finally block is executed after the execution of except or else block.
-
--- PyLint Overview
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+__name__ and __main__
+-------------------------------------------------------------------------------------------------------------------------------------------------------- - When ever we run our file "__main__" string is assigned to "__name__" variable.
+- It is a built-in varible of Python,
+- Using this variable we can check whether a module is run or is imported from another package.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Error and Exception handling
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+- Eror handling is similar to that of in another programming languages used.
+- We have try-except-else-finally block.
+- try block is a block where we test our code for error.
+- except block is triggered when we get an error in try block.
+- else block is followed after except block, this block is executed when we get no error in try block.
+- And finally block is executed after the execution of except or else block.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+PyLint Overview
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - For testing we use following tools:
 - Pylint: This is a library that looks at your code and report back possible issues. Issues basically related to indentation, styling and variable assignment.
 - unittest - This built-in library  will allow you to test your own programs and check are you getting desired outputs.
@@ -447,8 +496,10 @@ def greet():
  - Add DOCSTRING for every user-defined function.
  - Add new line at eof
 - unittesting demo is given in unitTesting.py file.
-
--- Decorators in Python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Decorators in Python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - Decorator allows you to decorate your function.
 - Suppose we have a function say hello(), we need to add some functionality to it.
 - One way is that we write a new function, another way is that we can manually add/remove extra functionality code.
@@ -501,8 +552,10 @@ def original_func():
 original_func()
 
 - @ operator as used above helps original func to add/remove extra functionality that we want to implement.
-
---Generators with Python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Generators with Python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - Generator function allows us to write a function that can send back a value and then latter resume to pick up where it left off.
 - Generator function generates value of a specific range.
 - They have some iterating protocal on them.
@@ -513,9 +566,12 @@ original_func()
 - generator.py file contains the example we convert a manual function into generator.
 - next() function is used to fetch next element of generator.
 - iter() function is used to convert string into generator so that they can access next() function.
-
--- Advanced Pyhton Modules
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Advanced Pyhton Modules
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - Counter module
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - It resides in collection package.
 - Counter() gives count of each element in dictionary format:
 >>> from collections import Counter
@@ -530,13 +586,17 @@ Counter({'l': 2, 'H': 1, 'e': 1, 'o': 1})
 >>> Counter(str_var).most_common()
 [('l', 2), ('H', 1), ('e', 1), ('o', 1)]
 >>> 
-
-- defaultdict:
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+defaultdict:
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - Suppose we created a dictionaries and we try to access a value whose key is not present in dict.
 - Then it will give us key error.
 - When we use defaultdict, if we access un-avaialble key, it will not through key-error.
-
--OrderedDict
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+OrderedDict
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - When we create a dict and print it, it gets printed in unordered format.
 - Consider the following example:
 # ordered dict
@@ -560,16 +620,20 @@ print('After using ordered dict:\n')
 
 for k,v in mydict.items():
     print(k, v)
-
--namedtuples
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+namedtuples
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - When we create a tuple, each element in tuple is access using indexes.
 - When we have larger number of element in tuples, it becomes hard to remember indexes of each element.
 - So namedtuple is collection using which we can access element using names as well as indexes.
 - When we create a namedtuple, we bascially create a class as follow:
 
 var = namedtuple(classname, 'atrr1 attr2 attr3')
-
--- DateTime
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+DateTime
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - datetime is the module used for manipulating date and time in pyhton.
 - datetime.datetime.now() method is used to print current date and time.
 - datetime.time(h, m, sec, microsec, tzinfo) is used to create an instance of user specified time.
@@ -605,8 +669,10 @@ datetime.timedelta(0, 560, 135671)
 
 - datetime.today() is used to get current date.
 - min, max, resolution is used to get minValue, Max value range and resolution(min difference) of datetime.
-
--- Python Debugger
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Python Debugger
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - pdb is the python Debugger
 - To use this debugger import pdb module.
 - Use pdb.pdb.set_trace() method to set the debugger in the code.
@@ -621,13 +687,17 @@ l: list source code for the current file (default: 11 lines including the line b
 u: navigate up a stack frame
 d: navigate down a stack frame
 p: to print the value of an expression in the current context
-
--- Timing your code - timeit module
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Timing your code - timeit module
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - Suppose we want to test the execution time of our code we can use timeit.timeit() method.
 - We can use this in two ways 1st is using magic string and another is timeit.timit() method.
 - timeit.timeit() method takes two arguments, 1st is expression in string that we want to test for timeit, and another is number= (no. of times we want to execute the statement)
-
--- Regular Expression - re
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Regular Expression - re
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - RE is text matching expression.
 - To use it we need to import re module
 - To match a specific pattern in string we can use re.match(pattern, string).
@@ -690,16 +760,20 @@ s[^d]+ - exclude any positive match of character d
 \S - non-whitespaces
 \w - aplha-numeric
 \W - non-alpha-numeric
-
--- String IO 
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+String IO 
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - String IO module implements an in-memory file like object. This object can be used as input or output to most functions that would expect a standard file object.
 - We need to import StringIO module to use it.
 - StringIO.StringIO(STR) is the method used to convert a normal string into in-memory file object.
 - All file related operation can be applied over this object.
-
--- Advanced Python Object and data structure
-
-- Advanced Numbers
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Advanced Python Object and data structure
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Advanced Numbers
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 >>> hex(32)
 '0x20'
 >>> bin(32)
@@ -721,8 +795,10 @@ s[^d]+ - exclude any positive match of character d
 - pow(x, y, z) - returns (x**y) % z
 - abs() - returns absolute values.
 - round(x, y) - returns round of value of x, y represent number of decimal digit to be displayed.
-
--Advanced String
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Advanced String
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 >>> str1 = 'hello World'
 >>> str1.capitalize()
 'Hello world'
@@ -765,15 +841,15 @@ True
 >>> str2.find('p')
 5
 
-
 - capitalize() capitalizes first letter of the string.
 - istitle() checks if the string is of type heading title
 - partition() splits the string from the first occurance of the match.
 - count() returns the number of occurance of given character in string.
 - find() returns index of first occurance of given character.
-
--- Advanced Sets
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Advanced Sets
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 >>> s = {1,2,3}
 >>> sc = s.copy()
 >>> sc
@@ -841,13 +917,17 @@ True
 >>> s1
 {1, 4, 5}
 >>> 
-
--- Advanced Dictionaries
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Advanced Dictionaries
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 - dict.viewvalues() is used to display values in dictionaries.
 - dict.viewitems() is used to display items other than iter methods.
 - iter methods like items(), itervalues(), iterkeys() are used to display items in dictionaries.
-
--- Advanced list
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Advanced list
+---------------------------------------------------------------------------------------------------------------------------------------------------------
 >>> l1 = [1,2,3]
 >>> l1.append(4)
 >>> l1
@@ -887,17 +967,4 @@ True
 >>> l1.remove(0)
 >>> l1
 [1, 2, 3, 4, 5, 0]
-
-
-
-
-
-
-
-
- 
-
-
-
-
- 
+---------------------------------------------------------------------------------------------------------------------------------------------------------
