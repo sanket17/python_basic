@@ -55,5 +55,19 @@ Javascript Introduction
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 Document Object Model
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
-
+- Some important method:
+ document.getElementById() - Returns element with the id.
+ document.getElementByClassName() - Returns list of all the element belonging to that class.
+ document.getElementByTagName() - Returns list of all element with the tag (ex> ul/li/div etc..)
+ document.querySelector() - Returns the first object matching the CSS style selector. (Style selector - #id, .clasname, tag- h2 etc)
+ document.querySelectorAll() - Returns all objects matching the CSS style selector.
+ myvariable.textContent - This returns just the text.
+ myvariable.innerHTML - This returns actual HTML.
+ myvariable.getAttribute() - This returns the original attribute.
+ myvariable.setAttribute() - This allows you to set the attribute.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+jQuery Introduction
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+-
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
