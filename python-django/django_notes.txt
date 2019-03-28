@@ -69,5 +69,16 @@ Document Object Model
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 jQuery Introduction
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
--
+- It is available at code.jquery.com
+- event.which gives the keypress code.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Python
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+- use # for one line comments
+- For string slicing [start:end:step] default step size is one.
+- Indexing and slicing works same in both string and list.
+- Dictionaries in python are similar to that of object in Javascript, the only difference between them is that we cannot define method in dictionaries as that of in JS.
+- Tuples are similar to that of list but only difference is that they are immutable.
+- Slicing and indexing are similar in tuples.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
